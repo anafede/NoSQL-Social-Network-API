@@ -2,8 +2,7 @@ const {User, Thought} = require ('../models');
 
 module.exports = {
     getAllUsers(req, res){
-        User.find({})
-        .select('-__v')
+        User.find()
         .then(userData => 
             res.json(userData))
             .catch(err => {
